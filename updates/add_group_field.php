@@ -2,8 +2,8 @@
 
 namespace Martin\Forms\Updates;
 
-use Winter\Storm\Support\Facades\Schema;
-use Winter\Storm\Database\Updates\Migration;
+use Schema;
+use October\Rain\Database\Updates\Migration;
 
 class AddGroupField extends Migration
 {

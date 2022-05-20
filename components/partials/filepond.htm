@@ -34,9 +34,9 @@
         const isLoading = pond.getFiles().filter(x => x.status !== 5).length !== 0;
 
         if (isLoading) {
-            $('form [type="submit"]').attr("disabled", "disabled");
+            document.querySelector('form [type="submit"]').setAttribute("disabled", "disabled");
         } else {
-            $('form [type="submit"]').removeAttr("disabled");
+            document.querySelector('form [type="submit"]').removeAttribute("disabled");
         }
     }
 </script>

@@ -6,7 +6,7 @@ use SplTempFileObject;
 use League\Csv\AbstractCsv;
 use Backend\Classes\Controller;
 use Martin\Forms\Models\Record;
-use Backend\Facades\BackendMenu;
+use BackendMenu;
 use League\Csv\Writer as CsvWriter;
 
 class Exports extends Controller

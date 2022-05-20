@@ -4,7 +4,7 @@ namespace Martin\Forms\Classes\Mails;
 
 use Martin\Forms\Models\Record;
 use System\Models\MailTemplate;
-use Winter\Storm\Support\Facades\Mail;
+use October\Rain\Support\Facades\Mail;
 use Martin\Forms\Classes\BackendHelpers;
 
 class AutoResponse implements Mailable

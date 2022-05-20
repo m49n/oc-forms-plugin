@@ -2,15 +2,15 @@
 
 namespace Martin\Forms\Controllers;
 
-use Backend\Facades\Backend;
+use Backend;
 use Martin\Forms\Classes\GDPR;
 use Backend\Classes\Controller;
 use Martin\Forms\Models\Record;
-use Backend\Facades\BackendMenu;
+use BackendMenu;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 use Martin\Forms\Classes\UnreadRecords;
-use Winter\Storm\Support\Facades\Flash;
+use October\Rain\Support\Facades\Flash;
 use Illuminate\Support\Facades\Redirect;
 
 class Records extends Controller

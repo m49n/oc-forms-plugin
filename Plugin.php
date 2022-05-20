@@ -2,7 +2,7 @@
 
 namespace Martin\Forms;
 
-use Backend\Facades\Backend;
+use Backend;
 use Martin\Forms\Classes\GDPR;
 use System\Classes\PluginBase;
 use Martin\Forms\Models\Settings;
@@ -10,7 +10,7 @@ use System\Classes\SettingsManager;
 use Illuminate\Support\Facades\Lang;
 use Martin\Forms\Classes\UnreadRecords;
 use Martin\Forms\Classes\BackendHelpers;
-use Winter\Storm\Support\Facades\Validator;
+use Validator;
 
 class Plugin extends PluginBase
 {

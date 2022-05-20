@@ -1,12 +1,12 @@
-var captchas = [];
+let captchas = [];
 
-var onloadCallback = function() {
-    jQuery('.g-recaptcha').each(function(index, el) {
-        captchas[el.id] = grecaptcha.render(el, $(el).data());
+let onloadCallback = function() {
+    document.querySelectorAll('.g-recaptcha').forEach(function(el) {
+        captchas[el.id] = grecaptcha.render(el, el.dataset.id);
     });
 }
 
 function resetReCaptcha(id) {
-    var widget = captchas[id];
+    let widget = captchas[id];
     grecaptcha.reset(widget);
 }

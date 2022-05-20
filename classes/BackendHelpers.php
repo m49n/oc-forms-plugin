@@ -37,6 +37,22 @@ class BackendHelpers
     }
 
     /**
+     * Recursively apply a callback function to every items in give array
+     *
+     * @param $callback
+     * @param $array
+     * @return array|false[]
+     */
+    public static function array_map_recursive($callback, $array)
+    {
+        $func = function ($item) use (&$func, &$callback) {
+            return is_array($item) ? array_map($func, $item) : call_user_func($callback, $item);
+        };
+
+        return array_map($func, $array);
+    }
+
+    /**
      * Render an array|object as HTML list (UL > LI)
      *
      * @param mixed $data List items
@@ -76,9 +92,9 @@ class BackendHelpers
     /**
      * Extract string from curly braces
      *
-     * @param string $pattern     Pattern to replace
-     * @param string $replacement Replacement string
-     * @param string $subject     Strings to replace
+     * @param string      $pattern     Pattern to replace
+     * @param string|null $replacement Replacement string
+     * @param string      $subject     Strings to replace
      *
      * @return string
      */

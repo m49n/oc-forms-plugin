@@ -130,3 +130,7 @@
     - added dutch translation [thanks to rubenvanerk]
 2.0.0:
     - new AJAX upload component using Filepond
+2.1.0:
+    - October CMS v3 and Laravel 9 support
+    - various fixes
+    - removed jQuery from default filepond partial

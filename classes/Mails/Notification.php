@@ -4,12 +4,13 @@ namespace Martin\Forms\Classes\Mails;
 
 use Martin\Forms\Models\Record;
 use System\Models\MailTemplate;
-use Winter\Storm\Database\Collection;
-use Winter\Storm\Support\Facades\Mail;
+use October\Rain\Database\Collection;
+use Mail;
 use Martin\Forms\Classes\BackendHelpers as BH;
 
 class Notification implements Mailable
 {
+
     private $properties;
     private $post;
     private $record;
@@ -58,7 +59,11 @@ class Notification implements Mailable
         }
 
         // SEND NOTIFICATION EMAIL
-        Mail::sendTo($this->properties['mail_recipients'], $template, $this->data, function ($message) {
+        $emails = array_map(
+            fn ($item) => strval($item),
+            array_flip($this->properties['mail_recipients'])
+        );
+        Mail::sendTo($emails, $template, $this->data, function ($message) {
             // SEND BLIND CARBON COPY
             if (!empty($this->properties['mail_bcc']) && is_array($this->properties['mail_bcc'])) {
                 $message->bcc($this->properties['mail_bcc']);
@@ -71,7 +76,7 @@ class Notification implements Mailable
 
             // ADD REPLY TO ADDRESS
             if (!empty($this->properties['mail_replyto'])) {
-                $message->replyTo($this->properties['mail_replyto']);
+                $message->replyTo($this->post[$this->properties['mail_replyto']]);
             }
 
             // ADD UPLOADS
