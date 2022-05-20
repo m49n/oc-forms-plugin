@@ -3,6 +3,6 @@
     "type": "october-plugin",
     "description": "Create easy (and almost magic) AJAX forms",
     "keywords": ["october", "cms", "plugin", "forms", "magic forms"],
-    "homepage": "https://github.com/skydiver/wn-magic-forms/",
+    "homepage": "https://github.com/sergeitoroptsev/oc-forms-plugin/",
     "license": "MIT"
 }
