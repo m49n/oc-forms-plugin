@@ -1,5 +1,17 @@
-![](https://banners.beyondco.de/Magic%20Forms%20for%20WinterCMS.png?theme=light&packageManager=composer+require&packageName=martin%2Fwn-forms-plugin&pattern=architect&style=style_1&description=Create+easy+%28and+almost+magic%29+forms&md=1&showWatermark=0&fontSize=100px&images=lightning-bolt)
+# Magic Forms 2 with October CMS v3 support 🔥🔥🔥
 
+This is fork of skydiver/wn-forms-plugin. Author: https://github.com/skydiver
+
+After October CMS v2 was released author migrated to Winter CMS and stopped October CMS support.
+
+## Some exclusive features:
+* based on latest version (2.1.0)
+* supports October CMS v3 and php 8.1
+* replaced scripts and default partials with vanilla js
+
+I hope You enjoy it 🥰
+
+***
 
 ## Why Magic Forms?
 Almost everyday we do forms for our clients, personal projects, etc
