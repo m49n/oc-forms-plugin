@@ -36,8 +36,8 @@ trait SendMails
         $notification = App::makeWith(Notification::class, [
             'properties' => $this->getProperties(),
             'post' => $post,
-            $record,
-            $record->files
+            'record' => $record,
+            'files' => $record->files
         ]);
 
         $notification->send();
